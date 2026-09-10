@@ -1,38 +1,3 @@
-import cli
-
-cli.configurep([
-    "hostname CAT8K",
-    "interface GigabitEthernet1",
-    "ip address dhcp",
-    "no shutdown",
-    "username admin privilege 15 secret C1sc0123!",
-    "ip http server",
-    "ip http secure-server",
-    "ip http authentication local",
-    "ip domain name ine.local",
-    "crypto key generate rsa modulus 2048",
-    "ip ssh version 2",
-    "line vty 0 4",
-    "login local",
-    "transport input ssh",
-    "interface Loopback0",
-    "ip address 10.10.10.1 255.255.255.255",
-    "description Created via ZTP Python script"
-])
-
-Launching HTTP Server
-
-Open Command-Prompt
-python -m http.server 80
-
-ip dhcp pool ZTP-POOL
- network 10.199.199.0 255.255.255.0
- default-router 10.199.199.254
- option 67 ascii http://10.199.199.100/ztp_script.py
-Entendi, Roberto! Você quer transformar esse trecho de configuração em um artigo e depois enviar para o seu GitHub. Posso te ajudar a estruturar o artigo em formato de texto técnico, mas não consigo enviar diretamente para o seu repositório — isso você precisará fazer pelo seu cliente Git ou via interface do GitHub.
-
-Aqui está uma sugestão de artigo bem organizado com base no conteúdo que você forneceu:
-
 🚀 Automação de Configuração com Python e ZTP
 Este artigo demonstra como utilizar Python e Zero Touch Provisioning (ZTP) para configurar automaticamente um dispositivo Cisco Catalyst 8000 (CAT8K).
 
